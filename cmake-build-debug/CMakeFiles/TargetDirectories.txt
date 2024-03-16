@@ -1,0 +1,3 @@
+/personal_data/learning_projects/treesCpp/cmake-build-debug/CMakeFiles/treesCpp.dir
+/personal_data/learning_projects/treesCpp/cmake-build-debug/CMakeFiles/edit_cache.dir
+/personal_data/learning_projects/treesCpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
