@@ -17,7 +17,7 @@ class Tree {
         explicit Tree(Node<T>* r) : root(r) {};
 
         void insert(Node<T>* node);
-        Node<T> find(T type) const;
+        bool find(T type) const;
 
         void printTree() const;
 
@@ -74,10 +74,28 @@ void Tree<T>::print(Node<T> *r) const {
 }
 
 template<typename T>
-Node<T> Tree<T>::find(T type) const {
+bool Tree<T>::find(T type) const {
+    if (root == nullptr)
+        return false;
 
-    
-    return nullptr;
+    Node<T>* currentNode = root;
+
+    while(true) {
+        if (currentNode->getData() == type)
+            return true;
+
+        if (currentNode->getData() < type) {
+            if (currentNode->getRight() == nullptr)
+                return false;
+            else
+                currentNode = currentNode->getRight();
+        } else {
+            if (currentNode->getLeft() == nullptr)
+                return false;
+            else
+                currentNode = currentNode->getLeft();
+        }
+    }
 }
 
 

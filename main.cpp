@@ -11,7 +11,6 @@ int main() {
     Node<int> node6{7};
     Node<int> node5{8};
 
-
     Tree<int> tree{&root};
 
     tree.insert(&node1);
@@ -19,7 +18,7 @@ int main() {
     tree.insert(&node3);
 
 
-    tree.printTree();
+    cout << tree.find(82) << endl;
 
     return 0;
 }
